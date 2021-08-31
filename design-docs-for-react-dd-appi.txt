@@ -1,0 +1,31 @@
+design doc
+For the app
+
+1
+api-for data or some other way- https://www.dnd5eapi.co/api/monsters 
+
+But for every creature there is an own URL that needs to be fetched
+
+--make own api later from the aws, using the api-gateway
+
+images for stuff
+
+
+2)
+monsters in a list or some table
+
+maybe cards or something like luontoportti site
+
+3)
+clickable, if clicked, will show all the info.
+-stats of monsters like str etc, feats,
+
+4)
+can add new monsters to the list
+-stats
+-images
+
+5)
+can delete/modify, old monsters from the list
+
+Might need db, or some other way of showing all monsters
