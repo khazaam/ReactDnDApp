@@ -7,12 +7,17 @@ const Content = () => {
     let matikka = Math.floor(Math.random() * 4)
     return testi[matikka];
 }
+
+const handleClick = () => (
+    console.log("REEEE, you clicked this thingie")
+)
     return (
         <main>
             <Card>
                 <p>
                     Ree{raplaus()}!
                 </p>
+                <button onClick={handleClick}>LeButton</button>
             </Card>
         </main>
     )

@@ -1,13 +1,10 @@
 import React from 'react'
 
 const Header = () => {
-    const headerStyle = {
-        backgroundColor:'#ffddd2',
-        color: "black" //not needed
-    };
+    
 
     return (
-        <header style={headerStyle}>
+        <header>
             <h1>Monsters & Friends</h1>
         </header>
     )

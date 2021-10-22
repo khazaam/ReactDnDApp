@@ -1,3 +1,4 @@
+//Not in use yet, might not never be, as the header is now the main piece, might add this later to us
 const Navbar = () => {
     return ( 
         <nav className="navbar">
