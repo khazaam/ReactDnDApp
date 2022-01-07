@@ -6,3 +6,11 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/learn react/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+//Villes random test scripts
+const condition = "Ree";
+
+if(condition) {
+  //...
+}
+else;

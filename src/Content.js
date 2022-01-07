@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'reactstrap';
 
+//To do get stuff from Go part
 const Content = () => {
     const raplaus = () => {
     let testi = ['testi', 'Toinen testi'];
