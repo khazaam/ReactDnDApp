@@ -4,6 +4,8 @@ For the app
 1
 api-for data or some other way- https://www.dnd5eapi.co/api/monsters 
 
+Data can now be fetced, need to add second part where the url part is taken.
+
 But for every creature there is an own URL that needs to be fetched
 
 --make own api later from the aws, using the api-gateway
@@ -27,5 +29,7 @@ can add new monsters to the list
 
 5)
 can delete/modify, old monsters from the list
+
+This needs to be saved into a object etc, then saved etc.
 
 Might need db, or some other way of showing all monsters
