@@ -33,3 +33,5 @@ can delete/modify, old monsters from the list
 This needs to be saved into a object etc, then saved etc.
 
 Might need db, or some other way of showing all monsters
+
+Then some system to delete duplicates
