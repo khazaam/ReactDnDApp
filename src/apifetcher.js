@@ -11,48 +11,44 @@ import { useEffect, useState } from 'react';
 //how the arim works, and or etc
 //tiedonhakujuttuja lisää
 
-const apiUrli = "https://www.dnd5eapi.co/api/monsters";
-
-
-
-
-
-function ApiFetcher(){
-
-    
-    const[setApiData] = useState({});
-
-      useEffect(() => {
-        AxiData();
-        //some problem with this
-      }, []);
-
-    
-
-    // old quick
-    
-    axios.get(apiUrli)
-    .then(response => {
-
-        console.log(response, "eka");
-
-    })
-    
-    //
-    
-    //old
-    const AxiData = async () => {
-        const response = await axios.get(apiUrli, "toka");
-        setApiData(response.data);
-        console.log(response.data);
-
+export default function ApiFetcher(){
+const [data, setData] = useState(null);
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState(null);
+   
+useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await axios.get(
+          `https://api.randomuser.me/?results=5`
+        );
+        setData(response.data);
+        setError(null);
+      } catch (err) {
+        setError(err.message);
+        setData(null);
+      } finally {
+        setLoading(false);
+      }
     };
+    getData();
+  }, []);
 
-    //new, broken part still
-
-    //
-    
-
+  return (
+    <div className="App">
+      <h1>API </h1>
+      {loading && <div>A moment please...</div>}
+      {error && (
+        <div>{`There is a problem fetching the post data - ${error}`}</div>
+      )}
+      <ul>
+        {data &&
+          data.map(({ id, name }) => (
+            <li key={id}>
+              <h3>{name}</h3>
+            </li>
+          ))}
+      </ul>
+    </div>
+  );
 }
-
-export default ApiFetcher;

@@ -2,6 +2,7 @@
 import Header from './Header';
 import Content from './Content';
 import Footer from './Footer';
+import BaseComp from './baseComp';
 
 function App(){
    
@@ -12,6 +13,7 @@ return (
         <Header />
         <Content />
         <Footer />
+        <BaseComp />
     </div>
 
 );
