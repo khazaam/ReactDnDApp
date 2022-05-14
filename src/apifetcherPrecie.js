@@ -3,22 +3,39 @@ import axios from 'axios';
 //such as names etc
 //how the arim works, and or etc
 //tiedonhakujuttuja lisää
-
+import { useEffect,useState } from 'react';
+import ReactDOM from "react-dom/client";
 const apiUrli = "https://www.dnd5eapi.co/api/monsters";
 
+let monsterArray = [];
 //changes into norma, put filters
-function NormalFetch(){
-
-    // old quick
+const NormalFetch = () => {
     
-    axios.get(apiUrli)
-    .then(response => {
+    const [data, setData] = useState(null);
 
-        console.log(response, "eka");
 
-    })
-    
+    useEffect(() => {
+      axios
+      .get(apiUrli)
+      .then(res => {
+          const newItem = {
+              id: res.data.id,
+              name: res.data.name,
+          };
+          monsterArray.push(newItem)
+      })
+    }, []);
 
-}
+   console.log(monsterArray, "monster array");
+   return (
+    <>
+      {data &&
+        data.map((item) => {
+          return <p key={item.id}>{item.title}</p>;
+        })}
+    </>
+  );
+};
+//still empty
 
 export default NormalFetch;
