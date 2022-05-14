@@ -11,7 +11,8 @@ import { useEffect, useState } from 'react';
 //how the arim works, and or etc
 //tiedonhakujuttuja lisää
 
-export default function ApiFetcher(){
+const ApiFetcher = () => {
+
 const [data, setData] = useState(null);
 const [loading, setLoading] = useState(true);
 const [error, setError] = useState(null);
@@ -52,3 +53,5 @@ useEffect(() => {
     </div>
   );
 }
+
+export default ApiFetcher;

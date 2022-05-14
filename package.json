@@ -37,7 +37,7 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-react-hooks": "^4.6.0-next-52c434be1-20220512",
     "tslint": "^6.1.3",
     "typescript": "^4.6.4"
   }

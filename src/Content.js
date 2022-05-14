@@ -1,10 +1,9 @@
 import React from 'react'
 import { Card } from 'reactstrap';
-//import ApiFetcher from './apifetcher';
-import ApiFetcherOldie from './apifetcherPrecie';
 import ApiFetcher from './apifetcher';
 
-import MonsterFetch from './apifetcherPrecie';
+import NormalFetch from './apifetcherPrecie';
+import BaseComp from './baseComp';
 //Go content have been deleted from this
 //Creating just react content
 //this is the main content page
@@ -33,8 +32,8 @@ const handleClick = () => (
             </Card>
             <Card>
                 <p>This is api old button</p>
-                <button onClick={MonsterFetch}>Only API - axios</button>
-            </Card>
+                <button onClick={NormalFetch}>Only API - axios</button>
+            </Card>          
 
         </main>
     )

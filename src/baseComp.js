@@ -16,7 +16,7 @@ const BaseComp=()=>{
         axios.get('https://reqres.in/api/unknown')
             .then(res=>{
                 console.log('Response from main API: ',res)
-                console.log('Home Data: ',res.data.data)
+                console.log('Data: ',res.data.data[3])
                 console.log('Home Data: ',res.data)
                 //let companyData=res.data.ad;
                 let MainData=res.data.name
@@ -32,7 +32,7 @@ const BaseComp=()=>{
     },[])
     return(
         <>
-            <h1>{Data.name}</h1>
+            <h1>{Data.name[0]}</h1>
             <p>{Data.pantone_value}</p>
             <EkstraUrl data={colorsData}/>
         </>
